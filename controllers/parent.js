@@ -75,7 +75,7 @@ exports.GetChildrenMobileUsage = async (req, res) => {
       parentAccount: parentId,
       accountType: "Child",
     });
-    console.log('children', children)
+    console.log('children :', children)
 
     if (!children.length) {
       return res
