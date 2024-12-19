@@ -75,7 +75,7 @@ exports.GetChildrenMobileUsage = async (req, res) => {
       parentAccount: parentId,
       accountType: "Child",
     });
-    console.log('children :', children)
+    console.log('children 1:', children)
 
     if (!children.length) {
       return res
@@ -85,6 +85,7 @@ exports.GetChildrenMobileUsage = async (req, res) => {
 
     // Step 2: Extract user IDs of children
     const childIds = children.map((child) => child._id);
+    console.log('children 2:', childIds)
 
     const today = new Date();
     today.setHours(0, 0, 0, 0); // Set to the beginning of today
